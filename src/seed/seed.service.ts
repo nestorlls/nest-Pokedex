@@ -13,8 +13,8 @@ export class SeedService {
   constructor(
     @InjectModel(Pokemon.name)
     private readonly pokemonModel: Model<Pokemon>,
-    private readonly httpAxios: AxiosAdapter,
     private readonly httpFetch: FetchAdapter,
+    private readonly httpAxios: AxiosAdapter,
   ) {}
   async executeSeed() {
     await this.pokemonModel.deleteMany({});
